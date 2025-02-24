@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prime Montessori School</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FF69B4',
+secondary: '#FFD700'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.slide {
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+position: absolute;
+width: 100%;
+height: 100%;
+}
+.slide.active {
+opacity: 1;
+}
+.nav-dot {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #FFD700;
+opacity: 0.5;
+cursor: pointer;
+transition: opacity 0.3s ease;
+}
+.nav-dot.active {
+opacity: 1;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-white shadow-md z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="font-['Pacifico'] text-2xl text-[#800020]"><img src="Images/images.png"></span>
+</div>
+<div class="flex items-center space-x-4">
+<a href="#" class="text-[#800020] hover:text-primary">Home</a>
+<a href="#" class="text-[#800020] hover:text-primary">About</a>
+<a href="#" class="text-[#800020] hover:text-primary">Programs</a>
+<a href="#" class="text-[#800020] hover:text-primary">Contact</a>
+<button class="bg-secondary text-[#800020] px-4 py-2 rounded-button hover:bg-opacity-90">Apply Now</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Slideshow -->
+<div class="relative h-[500px] mt-16">
+<div id="slideshow" class="w-full h-full relative overflow-hidden">
+<div class="slide active">
+<img src="Images/images (1).jpeg" class="w-full h-full object-cover" alt="Classroom">
+<div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<div class="text-center text-white">
+<h1 class="text-4xl font-bold mb-4">Welcome to Prime Montessori School</h1>
+<p class="text-xl">Nurturing Tomorrow's Leaders Today</p>
+</div>
+</div>
+</div>
+<div class="slide">
+<img src="Images/images.jpeg" class="w-full h-full object-cover" alt="Learning">
+<div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<div class="text-center text-white">
+<h1 class="text-4xl font-bold mb-4">Experiential Learning</h1>
+<p class="text-xl">Where Education Meets Innovation</p>
+</div>
+</div>
+</div>
+<div class="slide">
+<img src="Images/images.jpeg" class="w-full h-full object-cover" alt="Learning Environment">
+<div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<div class="text-center text-white">
+<h1 class="text-4xl font-bold mb-4">Holistic Development</h1>
+<p class="text-xl">Building Character Through Education</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+<div class="nav-dot active"></div>
+<div class="nav-dot"></div>
+<div class="nav-dot"></div>
+</div>
+</div>
+<!-- Features Section -->
+<section class="py-12 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-[#800020] mb-8">Why Choose Prime Montessori?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="w-12 h-12 flex items-center justify-center mb-4">
+<i class="ri-book-open-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold text-[#800020] mb-2">Personalized Learning</h3>
+<p class="text-gray-600">Tailored education plans that adapt to each child's unique learning style and pace.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="w-12 h-12 flex items-center justify-center mb-4">
+<i class="ri-team-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold text-[#800020] mb-2">Expert Faculty</h3>
+<p class="text-gray-600">Dedicated teachers with extensive Montessori training and experience.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="w-12 h-12 flex items-center justify-center mb-4">
+<i class="ri-plant-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold text-[#800020] mb-2">Nurturing Environment</h3>
+<p class="text-gray-600">Safe and stimulating spaces that encourage exploration and growth.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Programs Section -->
+<section class="py-12">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center text-[#800020] mb-8">Our Programs</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/4559afe8c169cae7de10b074449b4bb6.jpg" class="w-full h-64 object-cover" alt="Primary Program">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-[#800020] mb-2">Primary Program (Ages 3-6)</h3>
+<p class="text-gray-600 mb-4">Foundation for lifelong learning through hands-on experiences and discovery.</p>
+<button class="bg-secondary text-[#800020] px-4 py-2 rounded-button hover:bg-opacity-90">Learn More</button>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-lg shadow-md">
+<img src="https://public.readdy.ai/ai/img_res/3e98e89ae6206e6edb81523d48d8ab36.jpg" class="w-full h-64 object-cover" alt="Elementary Program">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-[#800020] mb-2">Elementary Program (Ages 6-12)</h3>
+<p class="text-gray-600 mb-4">Advanced curriculum focusing on academic excellence and personal growth.</p>
+<button class="bg-secondary text-[#800020] px-4 py-2 rounded-button hover:bg-opacity-90">Learn More</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="bg-[#800020] py-12">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<h2 class="text-3xl font-bold text-white mb-4">Join Our School Community</h2>
+<p class="text-white mb-8">Schedule a tour or apply for admission today</p>
+<button class="bg-secondary text-[#800020] px-6 py-3 rounded-button hover:bg-opacity-90 font-semibold">Schedule a Tour</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#800020] text-white py-8">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+<p>123 Education Street</p>
+<p>City, State 12345</p>
+<p>Phone: (555) 123-4567</p>
+<p>Email: info@primemontessori.edu</p>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+<ul>
+<li><a href="#" class="hover:text-secondary">About Us</a></li>
+<li><a href="#" class="hover:text-secondary">Programs</a></li>
+<li><a href="#" class="hover:text-secondary">Admissions</a></li>
+<li><a href="#" class="hover:text-secondary">Calendar</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a href="#" class="hover:text-secondary">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="hover:text-secondary">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="hover:text-secondary">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+// Slideshow functionality
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.nav-dot');
+function showSlide(index) {
+slides.forEach(slide => slide.classList.remove('active'));
+dots.forEach(dot => dot.classList.remove('active'));
+slides[index].classList.add('active');
+dots[index].classList.add('active');
+}
+function nextSlide() {
+currentSlide = (currentSlide + 1) % slides.length;
+showSlide(currentSlide);
+}
+// Add click events to dots
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentSlide = index;
+showSlide(currentSlide);
+});
+});
+// Auto advance slides
+setInterval(nextSlide, 5000);
+</script>
+</body>
+</html>
